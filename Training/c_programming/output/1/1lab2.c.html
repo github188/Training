@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><head><title>Coverity error reader: /workspace/david.shao/c_programming/lab2.c</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+<body link="#000000" vlink="#000000"><pre>
+<b><a name="line1">1    </a></b>	#include&lt;stdio.h&gt;
+<b><a name="line2">2    </a></b>	#include&lt;stdlib.h&gt;
+<b><a name="line3">3    </a></b>	#include&lt;math.h&gt;
+<b><a name="line4">4    </a></b>	#include &lt;limits.h&gt;
+<b><a name="line5">5    </a></b>	#define PRIME 1
+<b><a name="line6">6    </a></b>	#define NOT_PRIME 0
+<b><a name="line7">7    </a></b>	int i, j;
+<b><a name="line8">8    </a></b>	void Sieve(int *aRecord, int iNum)
+<b><a name="line9">9    </a></b>	{
+</pre>
+<table summary="events" bgcolor=#e0e0e0>
+<tr><td><font color="red">
+<a name="model:Sieve:baeed9aae75e268877b4f4f38ab900ca:0"></a>
+<a name="model:Sieve:baeed9aae75e268877b4f4f38ab900ca"></a>
+<b>(1) Event a_loop_bound</b>: </font></td>
+<td><font color="red">Using tainted variable &quot;iNum&quot; as a loop boundary.</font></td>
+</tr>
+</table>
+<pre><b><a name="line10">10   </a></b>		for(i = 2; i &lt;= iNum; ++i)
+<b><a name="line11">11   </a></b>		{
+<b><a name="line12">12   </a></b>			aRecord[i] = PRIME;
+<b><a name="line13">13   </a></b>		}
+<b><a name="line14">14   </a></b>		for(i = 2; i &lt;= sqrt(iNum); ++i)
+<b><a name="line15">15   </a></b>		{
+<b><a name="line16">16   </a></b>			if(aRecord[i])
+<b><a name="line17">17   </a></b>			{
+<b><a name="line18">18   </a></b>				for(j = i; j*i &lt;= iNum; ++j)
+<b><a name="line19">19   </a></b>				{
+<b><a name="line20">20   </a></b>					aRecord[j*i] = NOT_PRIME;
+<b><a name="line21">21   </a></b>				}
+<b><a name="line22">22   </a></b>			}
+<b><a name="line23">23   </a></b>		}
+<b><a name="line24">24   </a></b>		for(i = 2; i &lt;= iNum; ++i)
+<b><a name="line25">25   </a></b>		{
+<b><a name="line26">26   </a></b>			if(aRecord[i])
+<b><a name="line27">27   </a></b>			{
+<b><a name="line28">28   </a></b>				printf(&quot;%d &quot;, i);
+<b><a name="line29">29   </a></b>			}
+<b><a name="line30">30   </a></b>		}
+<b><a name="line31">31   </a></b>		printf(&quot;\n&quot;);
+<b><a name="line32">32   </a></b>	}
+<b><a name="line33">33   </a></b>	
+<b><a name="line34">34   </a></b>	
+<b><a name="line35">35   </a></b>	
+<b><a name="line36">36   </a></b>	int main()
+<b><a name="line37">37   </a></b>	{
+<b><a name="line38">38   </a></b>		int iNum = 0, iSize;
+<b><a name="line39">39   </a></b>		char cInput[31] = {0};
+<b><a name="line40">40   </a></b>		printf(&quot;Insert the number\n&quot;);
+</pre>
+<table summary="events" bgcolor=#e0e0e0>
+<tr><td><font color="red">
+<a name="error:0"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(1) Event tainted_string_argument</b>: </font></td>
+<td><font color="red">Call to &quot;scanf(&quot;%d&quot;, &amp;iNum)&quot; taints &quot;iNum&quot;.</font></td>
+</tr>
+<tr><td><font color="green">
+<a name="error:1"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(2) Event cond_false</b>: </font></td>
+<td><font color="green">Condition &quot;!scanf(&quot;%d&quot;, &amp;iNum)&quot;, taking false branch</font></td>
+</tr>
+<tr><td><font color="red">Also see events: </font></td>
+<td><font color="red">[<a href="#error:5">lower_bounds</a>][<a href="#error:8">tainted_data</a>]</font></td></tr>
+</table>
+<pre><b><a name="line41">41   </a></b>		if (!scanf(&quot;%d&quot;, &amp;iNum))
+<b><a name="line42">42   </a></b>		{
+<b><a name="line43">43   </a></b>			printf(&quot;ERROR\n&quot;);
+<b><a name="line44">44   </a></b>			exit(EXIT_FAILURE);
+</pre>
+<table summary="events" bgcolor=#e0e0e0>
+<tr><td><font color="green">
+<a name="error:2"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(3) Event if_end</b>: </font></td>
+<td><font color="green">End of if statement</font></td>
+</tr>
+</table>
+<pre><b><a name="line45">45   </a></b>		}
+<b><a name="line46">46   </a></b>		printf(&quot;%d\n&quot;, iNum);
+</pre>
+<table summary="events" bgcolor=#e0e0e0>
+<tr><td><font color="green">
+<a name="error:3"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(4) Event cond_false</b>: </font></td>
+<td><font color="green">Condition &quot;iNum &lt;= 0&quot;, taking false branch</font></td>
+</tr>
+<tr><td><font color="red">
+<a name="error:5"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(6) Event lower_bounds</b>: </font></td>
+<td><font color="red">Checking lower bounds of signed scalar &quot;iNum&quot; by &quot;iNum &lt;= 0&quot;.</font></td>
+</tr>
+<tr><td><font color="red">Also see events: </font></td>
+<td><font color="red">[<a href="#error:0">tainted_string_argument</a>][<a href="#error:8">tainted_data</a>]</font></td></tr>
+</table>
+<pre><b><a name="line47">47   </a></b>		if (iNum &lt;= 0)
+<b><a name="line48">48   </a></b>		{
+<b><a name="line49">49   </a></b>			printf(&quot;Negative Input\n&quot;);
+<b><a name="line50">50   </a></b>			exit(EXIT_FAILURE);
+</pre>
+<table summary="events" bgcolor=#e0e0e0>
+<tr><td><font color="green">
+<a name="error:4"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(5) Event if_end</b>: </font></td>
+<td><font color="green">End of if statement</font></td>
+</tr>
+</table>
+<pre><b><a name="line51">51   </a></b>		}
+<b><a name="line52">52   </a></b>		iSize = iNum + 1;
+</pre>
+<table summary="events" bgcolor=#e0e0e0>
+<tr><td><font color="green">
+<a name="error:6"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(7) Event cond_false</b>: </font></td>
+<td><font color="green">Condition &quot;iSize * 4UL /* sizeof (int) */ &gt; 2147483647&quot;, taking false branch</font></td>
+</tr>
+</table>
+<pre><b><a name="line53">53   </a></b>		if (/*(iSize &gt; INT_MAX) ||*/ ((iSize * sizeof(int)) &gt; INT_MAX))
+<b><a name="line54">54   </a></b>		{   printf(&quot;%ld\n&quot;, iSize*sizeof(int));
+<b><a name="line55">55   </a></b>			printf(&quot;Overflow\n&quot;);
+<b><a name="line56">56   </a></b>			exit(EXIT_FAILURE);
+</pre>
+<table summary="events" bgcolor=#e0e0e0>
+<tr><td><font color="green">
+<a name="error:7"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(8) Event if_end</b>: </font></td>
+<td><font color="green">End of if statement</font></td>
+</tr>
+</table>
+<pre><b><a name="line57">57   </a></b>		}
+<b><a name="line58">58   </a></b>		int *aRecord = malloc(iSize * sizeof(int));
+</pre>
+<table summary="events" bgcolor=#e0e0e0>
+<tr><td><font color="red">
+<a name="error:8"></a>
+<a name="error"></a>
+<!-- merge-key 186afe3efbb8597ab563904f7533889f -->
+<b>(9) Event tainted_data</b>: </font></td>
+<td><font color="red">Passing tainted variable &quot;iNum&quot; to a tainted sink. [<a href="#model:Sieve:baeed9aae75e268877b4f4f38ab900ca">details</a>]</font></td>
+</tr>
+<tr><td><font color="red">Also see events: </font></td>
+<td><font color="red">[<a href="#error:0">tainted_string_argument</a>][<a href="#error:5">lower_bounds</a>]</font></td></tr>
+</table>
+<pre><b><a name="line59">59   </a></b>		Sieve(aRecord, iNum);
+<b><a name="line60">60   </a></b>		free(aRecord);
+<b><a name="line61">61   </a></b>		return 0;
+<b><a name="line62">62   </a></b>	}
+<b><a name="line63">63   </a></b>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre></body>
+</html>

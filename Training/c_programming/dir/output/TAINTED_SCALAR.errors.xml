@@ -1,0 +1,82 @@
+<error>
+<domain>STATIC_C</domain>
+<checker>TAINTED_SCALAR</checker>
+<file>/workspace/david.shao/c_programming/lab2.c</file>
+<function>main</function>
+<score>100</score>
+<ordered>true</ordered>
+<event>
+<tag>tainted_string_argument</tag>
+<description>{CovLStrv2{{t{Call to {0} taints {1}.}{{code{scanf(&quot;%d&quot;, &amp;iNum)}}}{{code{iNum}}}}}}</description>
+<line>41</line>
+</event>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStrv2{{t{Condition {0}, taking false branch}{{code{!scanf(&quot;%d&quot;, &amp;iNum)}}}}}}</description>
+<line>41</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>if_end</tag>
+<description>{CovLStrv2{{t{End of if statement}}}}</description>
+<line>45</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStrv2{{t{Condition {0}, taking false branch}{{code{iNum &lt;= 0}}}}}}</description>
+<line>47</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>if_end</tag>
+<description>{CovLStrv2{{t{End of if statement}}}}</description>
+<line>51</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<tag>lower_bounds</tag>
+<description>{CovLStrv2{{t{Checking lower bounds of signed scalar {0} by {1}.}{{code{iNum}}}{{code{iNum &lt;= 0}}}}}}</description>
+<line>47</line>
+</event>
+<event>
+<tag>cond_false</tag>
+<description>{CovLStrv2{{t{Condition {0}, taking false branch}{{code{iSize * 4UL /* sizeof (int) */ &gt; 2147483647}}}}}}</description>
+<line>53</line>
+<path_event>
+<jump>true</jump>
+</path_event>
+</event>
+<event>
+<tag>if_end</tag>
+<description>{CovLStrv2{{t{End of if statement}}}}</description>
+<line>57</line>
+<path_event>
+<suppressible>true</suppressible>
+</path_event>
+</event>
+<event>
+<main>true</main>
+<tag>tainted_data</tag>
+<description>{CovLStrv2{{t{Passing tainted variable {0} to a tainted sink.}{{code{iNum}}}}}}</description>
+<line>59</line>
+<model_ptr>
+<module>module</module>
+<property>prop</property>
+<file>/workspace/david.shao/c_programming/lab2.c</file>
+<function>Sieve</function>
+<key>baeed9aae75e268877b4f4f38ab900ca</key>
+<id>2</id>
+</model_ptr>
+</event>
+<extra></extra>
+<subcategory>critical_argument</subcategory>
+</error>

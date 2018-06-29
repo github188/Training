@@ -1,0 +1,23 @@
+ALL = 01_udp_server 01_udp_client 02_tcp_server 03_tcp_client 04_ubk_tcp_server
+CC = gcc
+CFLAGS = -Wall
+
+all: ${ALL}
+
+01_udp_server: 01_udp_server.c
+	${CC} $< ${CFLAGS} -o $@
+
+01_udp_client: 01_udp_client.c
+	${CC} $< ${CFLAGS} -o $@
+
+02_tcp_server: 02_tcp_server.c
+	${CC} $< ${CFLAGS} -o $@
+
+03_tcp_client: 03_tcp_client.c
+	${CC} $< ${CFLAGS} -o $@
+
+04_ubk_tcp_server: 04_ubk_tcp_server.c
+	${CC} $< ${CFLAGS} -o $@
+	
+clean:
+	rm ${ALL}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverity SYSTEM "config.dtd">
+<coverity>
+
+<metrics>
+    <metric>
+        <name>time</name>
+        <value>7</value>
+    </metric>
+    <metric>
+        <name>args</name>
+        <value>cov-build --dir=mydir</value>
+    </metric>
+    <metric>
+        <name>host</name>
+        <value>rd1-3</value>
+    </metric>
+    <metric>
+        <name>short-platform</name>
+        <value>linux64</value>
+    </metric>
+    <metric>
+        <name>platform</name>
+        <value>Linux 3.13.0-65-generic x86_64</value>
+    </metric>
+    <metric>
+        <name>ident</name>
+        <value>7.0.3 (build 95ee7d28a9 p-fresno-push-17316.506)</value>
+    </metric>
+    <metric>
+        <name>user</name>
+        <value>david.shao</value>
+    </metric>
+    <metric>
+        <name>cwd</name>
+        <value>/workspace/david.shao/socket_programming</value>
+    </metric>
+    <metric>
+        <name>config</name>
+        <value>/home/vivotek/local/coverity/analysis/config/coverity_config.xml</value>
+    </metric>
+    <metric>
+        <name>intermediatedir</name>
+        <value>/workspace/david.shao/socket_programming/mydir</value>
+    </metric>
+    <metric>
+        <name>outputdir</name>
+        <value>/workspace/david.shao/socket_programming/mydir/output</value>
+    </metric>
+    <metric>
+        <name>emitdir</name>
+        <value>/workspace/david.shao/socket_programming/mydir/emit</value>
+    </metric>
+    <metric>
+        <name>force</name>
+        <value>no</value>
+    </metric>
+    <metric>
+        <name>cygwin</name>
+        <value>no</value>
+    </metric>
+    <metric>
+        <name>failures</name>
+        <value>0</value>
+    </metric>
+    <metric>
+        <name>successes</name>
+        <value>10</value>
+    </metric>
+    <metric>
+        <name>buildcmd</name>
+        <value>make</value>
+    </metric>
+</metrics>
+</coverity>

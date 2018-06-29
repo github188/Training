@@ -1,0 +1,13 @@
+cov-analyze --all --enable-constraint-fpp --enable-callgraph-metrics -s /home/david.shao/workspace/c_programming -j 8 --paths 90 --dir dir 
+Analysis summary report:
+------------------------
+Files analyzed                 : 3
+Total LoC input to cov-analyze : 10155
+Functions analyzed             : 6
+Paths analyzed                 : 218
+Time taken by analysis         : 00:00:01
+Defect occurrences found       : 2 Total
+                                 1 PW.BAD_RETURN_TYPE_ON_MAIN
+                                 1 TAINTED_SCALAR
+
+Exceeded path limit of 90 paths in 16.67% of functions (normally up to 5% of functions encounter this limitation)

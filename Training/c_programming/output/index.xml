@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverity SYSTEM "config.dtd">
+<coverity>
+<title>Coverity Errors</title>
+<error>
+<checker>TAINTED_SCALAR</checker>
+<file>/workspace/david.shao/c_programming/lab2.c</file>
+<function>main</function>
+<unmangled_function>main</unmangled_function>
+<status>Unclassified</status>
+<num>1</num>
+<home>1/1lab2.c</home>
+</error>
+</coverity>

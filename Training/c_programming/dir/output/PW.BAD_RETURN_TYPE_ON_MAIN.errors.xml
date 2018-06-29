@@ -1,0 +1,23 @@
+<error>
+<domain>STATIC_C</domain>
+<checker>PW.BAD_RETURN_TYPE_ON_MAIN</checker>
+<file>/workspace/david.shao/c_programming/lab5.c</file>
+<function>unknown</function>
+<score>20</score>
+<ordered>true</ordered>
+<event>
+<main>true</main>
+<tag>bad_return_type_on_main</tag>
+<description>{CovLStr{v1}{return type of function &quot;main&quot; must be &quot;int&quot;}}</description>
+<line>4</line>
+</event>
+<event>
+<tag>caretline</tag>
+<description>     ^</description>
+<line>4</line>
+</event>
+<mergekey>588acc6bbb5c688b8ac37f18e6d59189</mergekey>
+<extra>void main()
+</extra>
+<subcategory>none</subcategory>
+</error>

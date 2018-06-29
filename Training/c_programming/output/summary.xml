@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE coverity SYSTEM "config.dtd">
+<coverity>
+<title>Coverity Errors</title>
+<error>
+<checker>TAINTED_SCALAR</checker>
+<file>nil</file>
+<function>nil</function>
+<num>1</num>
+</error>
+<error>
+<checker>Total</checker>
+<file>nil</file>
+<function>nil</function>
+<num>1</num>
+</error>
+</coverity>

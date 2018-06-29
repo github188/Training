@@ -1,0 +1,62 @@
+cmdline: command line: cov-analyze --all --enable-constraint-fpp --enable-callgraph-metrics -s /home/david.shao/workspace/c_programming -j 8 --paths 90 --dir dir 
+startup: am_pid=11491
+startup: detected platform: Linux 3.13.0-65-generic x86_64
+startup: target platform: linux64
+startup: Detected 32 cpu cores
+startup: host name: rd1-3
+startup: user name: david.shao
+startup: Analysis version: 7.0.3 (95ee7d28a9 p-fresno-push-17316.506)
+startup: temp directory: /tmp/cov-david.shao/5676e2c7402542d718c17f5bdeb46474
+startup: enable_constraint_fpp=1
+startup: current time: 2015-Dec-01 19:12:31
+startup: Detected amount of memory: 32900148kb
+startup: Limiting memory to 29610133kb
+cicx: Running: /home/vivotek/local/coverity/analysis/bin/cov-internal-calc-xrefs --emit /workspace/david.shao/c_programming/dir/emit --output /workspace/david.shao/c_programming/dir/output/merged-xrefs --strip-path /home/david.shao/workspace/c_programming --ticker-mode=no-spin --tus-file /workspace/david.shao/c_programming/dir/output/tus
+emitdb: callgraph.cpp:1764 11111111
+emitdb: callgraph.cpp:1775 11000011
+emitdb: callgraph.cpp:1796 11000011
+emitdb: callgraph.cpp:1800 11000011
+general: Starting analysis
+dm-access-lib: AM listening for DM at 127.0.0.1:38237
+dm-access-lib: AM starting DM with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dm --AM-port 38237 --log-file /workspace/david.shao/c_programming/dir/output/distributor.log -j 8 --AW-timeout 36000 /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+dm-access-lib: DM started: dm_pid=11495
+dm-access-lib: AM got connection from DM: (local) 127.0.0.1:38237 - 127.0.0.1:43495 (remote)
+wurlegend: <phase><n> dw_id wup_bytes dw_ms wur_bytes aw_ms [mem] paths (rest are labeled)
+wur: stat0 1 2316 75 279 4 mem=5046272 max=29786112 16 nr=3 n: batch 0
+wur: stat1 1 1818 3 216 3 18 nr=2 n: batch 1
+wur: stat2 2 798 76 79 2 mem=5050368 max=29790208 7 n: batch 2
+wur: conc0 1 1696 11 666 7 4 n: not_numeric in TU 2
+wur: conc1 1 2773 17 1184 17 7 n: get_worktime in TU 2
+wur: conc2 1 4761 56 997 54 52 n: main in TU 2
+wur: conc5 3 3275 112 470 36 mem=5890048 max=30629888 17 n: main in TU 3
+wur: conc3 2 2620 145 1046 140 91 PATHOUT=1 n: Sieve in TU 1
+wur: conc4 1 4895 40 931 40 37 n: main in TU 1
+wur: conctd3 1 1945 5 113 5 20 n: main in TU 2
+wur: conctd1 2 1769 4 138 3 19 n: main in TU 1
+wur: conctd0 3 1189 5 96 4 12 n: main in TU 3
+wur: conctd4 1 904 2 75 1 7 n: get_worktime in TU 2
+wur: conctd5 2 378 1 13 1 4 n: not_numeric in TU 2
+wur: conctd2 1 947 12 92 11 55 n: Sieve in TU 1
+wur: gen2 3 2812 53 13 50 18 n: batch 2
+wur: gen0 1 7919 74 18 72 68 nr=3 n: batch 0
+wur: gen1 2 6619 105 403 102 70 nr=2 n: batch 1
+analysis: 0ms: beginning TU reports pass
+summary: Analysis summary report:
+summary: ------------------------
+summary: Files analyzed                 : 3
+summary: Total LoC input to cov-analyze : 10155
+summary: Functions analyzed             : 6
+summary: Paths analyzed                 : 218
+summary: Time taken by analysis         : 00:00:01
+summary: Defect occurrences found       : 2 Total
+summary:                                  1 PW.BAD_RETURN_TYPE_ON_MAIN
+summary:                                  1 TAINTED_SCALAR
+summary: 
+summary: Exceeded path limit of 90 paths in 16.67% of functions (normally up to 5% of functions encounter this limitation)
+summary: Number of functions: 6
+summary: out_of_memory count: 0
+summary: paths_exceeded count: 1
+summary: recoverable failures: 0
+mem: AM peak mem bytes: 41484288
+assert: suppressed asserts: workers=0, master=0
+failures: recoverable failures: workers=0, master=0

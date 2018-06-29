@@ -1,0 +1,177 @@
+1448968351.608: DM started: dm_pid=11495
+1448968351.608: DM command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dm --AM-port 38237 --log-file /workspace/david.shao/c_programming/dir/output/distributor.log -j 8 --AW-timeout 36000 /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.608: Connecting to AM at 127.0.0.1:38237
+1448968351.609: Connected to AM: (local) 127.0.0.1:43495 - 127.0.0.1:38237 (remote)
+1448968351.610: Listening for DWs at 127.0.0.1:37987
+1448968351.610: Starting DW 1 with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dw --DM-port 37987 --DW-id 1
+1448968351.610: DW 1 started: dw_pid=11497
+1448968351.610: Starting DW 2 with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dw --DM-port 37987 --DW-id 2
+1448968351.610: DW 2 started: dw_pid=11498
+1448968351.610: Starting DW 3 with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dw --DM-port 37987 --DW-id 3
+1448968351.610: DW 3 started: dw_pid=11499
+1448968351.610: Starting DW 4 with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dw --DM-port 37987 --DW-id 4
+1448968351.610: DW 4 started: dw_pid=11500
+1448968351.612: Starting DW 5 with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dw --DM-port 37987 --DW-id 5
+1448968351.612: DW 5 started: dw_pid=11501
+1448968351.612: Starting DW 6 with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dw --DM-port 37987 --DW-id 6
+1448968351.612: DW 6 started: dw_pid=11502
+1448968351.612: Starting DW 7 with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dw --DM-port 37987 --DW-id 7
+1448968351.612: DW 7 started: dw_pid=11503
+1448968351.612: Starting DW 8 with command line: /home/vivotek/local/coverity/analysis/bin/cov-internal-dw --DM-port 37987 --DW-id 8
+1448968351.612: DW 8 started: dw_pid=11505
+1448968351.613: DW 1 log: 1448968351.612: Connecting to DM on 127.0.0.1:37987
+1448968351.613: DW 2 log: 1448968351.612: Connecting to DM on 127.0.0.1:37987
+1448968351.613: DW 3 log: 1448968351.612: Connecting to DM on 127.0.0.1:37987
+1448968351.613: DW 4 log: 1448968351.612: Connecting to DM on 127.0.0.1:37987
+1448968351.614: DW 5 log: 1448968351.613: Connecting to DM on 127.0.0.1:37987
+1448968351.614: Received a connection from a DW: 127.0.0.1:32831
+1448968351.614: DW 1 log: 1448968351.613: Connected to the DM: (local) 127.0.0.1:32831 - 127.0.0.1:37987 (remote)
+1448968351.614: DW 1 log: 1448968351.613: Sending DWDM_INIT: dw_id=1, benchmark=0
+1448968351.614: DW 2 log: 1448968351.612: Connected to the DM: (local) 127.0.0.1:32832 - 127.0.0.1:37987 (remote)
+1448968351.614: DW 2 log: 1448968351.612: Sending DWDM_INIT: dw_id=2, benchmark=0
+1448968351.614: DW 8 log: 1448968351.613: Connecting to DM on 127.0.0.1:37987
+1448968351.614: Received a connection from a DW: 127.0.0.1:32832
+1448968351.614: DW 3 log: 1448968351.613: Connected to the DM: (local) 127.0.0.1:32834 - 127.0.0.1:37987 (remote)
+1448968351.614: Received a connection from a DW: 127.0.0.1:32834
+1448968351.614: Received DWDM_INIT: dw_id=1, benchmark=0
+1448968351.614: Sending DMDW_INIT to DW 1: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.614: DW 3 log: 1448968351.613: Sending DWDM_INIT: dw_id=3, benchmark=0
+1448968351.614: DW 4 log: 1448968351.613: Connected to the DM: (local) 127.0.0.1:32835 - 127.0.0.1:37987 (remote)
+1448968351.614: DW 4 log: 1448968351.613: Sending DWDM_INIT: dw_id=4, benchmark=0
+1448968351.614: Received a connection from a DW: 127.0.0.1:32835
+1448968351.614: Received DWDM_INIT: dw_id=2, benchmark=0
+1448968351.614: Sending DMDW_INIT to DW 2: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.614: DW 1 log: 1448968351.613: Received DMDW_INIT: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.614: DW 6 log: 1448968351.614: Connecting to DM on 127.0.0.1:37987
+1448968351.615: Received DWDM_INIT: dw_id=3, benchmark=0
+1448968351.615: Sending DMDW_INIT to DW 3: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: DW 5 log: 1448968351.615: Connected to the DM: (local) 127.0.0.1:32836 - 127.0.0.1:37987 (remote)
+1448968351.615: DW 5 log: 1448968351.615: Sending DWDM_INIT: dw_id=5, benchmark=0
+1448968351.615: DW 7 log: 1448968351.614: Connecting to DM on 127.0.0.1:37987
+1448968351.615: Received a connection from a DW: 127.0.0.1:32836
+1448968351.615: DW 2 log: 1448968351.615: Received DMDW_INIT: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: Received a connection from a DW: 127.0.0.1:32837
+1448968351.615: Received DWDM_INIT: dw_id=4, benchmark=0
+1448968351.615: Sending DMDW_INIT to DW 4: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: DW 3 log: 1448968351.614: Received DMDW_INIT: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: DW 8 log: 1448968351.614: Connected to the DM: (local) 127.0.0.1:32837 - 127.0.0.1:37987 (remote)
+1448968351.615: DW 8 log: 1448968351.614: Sending DWDM_INIT: dw_id=8, benchmark=0
+1448968351.615: Received DWDM_INIT: dw_id=5, benchmark=0
+1448968351.615: Sending DMDW_INIT to DW 5: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: DW 1 log: 1448968351.614: Started listening for AW at 127.0.0.1:53806
+1448968351.615: DW 4 log: 1448968351.614: Received DMDW_INIT: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: Received DWDM_INIT: dw_id=8, benchmark=0
+1448968351.615: Sending DMDW_INIT to DW 8: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: DW 1 log: 1448968351.614: Starting AW with command line (COVERITY_DW_PORT=53806): /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.615: DW 5 log: 1448968351.615: Received DMDW_INIT: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: Received a connection from a DW: 127.0.0.1:32838
+1448968351.615: DW 1 log: 1448968351.614: AW started: aw_pid=11513
+1448968351.615: DW 6 log: 1448968351.615: Connected to the DM: (local) 127.0.0.1:32838 - 127.0.0.1:37987 (remote)
+1448968351.615: DW 6 log: 1448968351.615: Sending DWDM_INIT: dw_id=6, benchmark=0
+1448968351.615: DW 8 log: 1448968351.614: Received DMDW_INIT: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.615: DW 2 log: 1448968351.616: Started listening for AW at 127.0.0.1:60000
+1448968351.615: DW 7 log: 1448968351.616: Connected to the DM: (local) 127.0.0.1:32839 - 127.0.0.1:37987 (remote)
+1448968351.615: Received a connection from a DW: 127.0.0.1:32839
+1448968351.616: DW 2 log: 1448968351.616: Starting AW with command line (COVERITY_DW_PORT=60000): /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.616: DW 7 log: 1448968351.616: Sending DWDM_INIT: dw_id=7, benchmark=0
+1448968351.616: Received DWDM_INIT: dw_id=6, benchmark=0
+1448968351.616: Sending DMDW_INIT to DW 6: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.616: DW 2 log: 1448968351.616: AW started: aw_pid=11514
+1448968351.616: DW 3 log: 1448968351.614: Started listening for AW at 127.0.0.1:48726
+1448968351.616: DW 3 log: 1448968351.614: Starting AW with command line (COVERITY_DW_PORT=48726): /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.616: Received DWDM_INIT: dw_id=7, benchmark=0
+1448968351.616: Stopping to listen for new DWs
+1448968351.616: Sending DMDW_INIT to DW 7: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.616: DW 3 log: 1448968351.614: AW started: aw_pid=11515
+1448968351.616: DW 4 log: 1448968351.615: Started listening for AW at 127.0.0.1:42691
+1448968351.616: DW 6 log: 1448968351.615: Received DMDW_INIT: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.616: DW 4 log: 1448968351.615: Starting AW with command line (COVERITY_DW_PORT=42691): /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.616: DW 4 log: 1448968351.615: AW started: aw_pid=11516
+1448968351.616: DW 5 log: 1448968351.616: Started listening for AW at 127.0.0.1:42218
+1448968351.616: DW 5 log: 1448968351.616: Starting AW with command line (COVERITY_DW_PORT=42218): /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.616: DW 7 log: 1448968351.616: Received DMDW_INIT: aw_command_line=["/home/vivotek/local/coverity/analysis/bin/cov-analyze","--worker"], aw_image=(empty), awFaults=[], awTimeoutSeconds=36000
+1448968351.616: DW 8 log: 1448968351.615: Started listening for AW at 127.0.0.1:54062
+1448968351.616: DW 8 log: 1448968351.615: Starting AW with command line (COVERITY_DW_PORT=54062): /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.616: DW 5 log: 1448968351.616: AW started: aw_pid=11517
+1448968351.616: DW 8 log: 1448968351.615: AW started: aw_pid=11518
+1448968351.617: DW 6 log: 1448968351.617: Started listening for AW at 127.0.0.1:39239
+1448968351.617: DW 6 log: 1448968351.617: Starting AW with command line (COVERITY_DW_PORT=39239): /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.617: DW 6 log: 1448968351.617: AW started: aw_pid=11519
+1448968351.617: DW 7 log: 1448968351.617: Started listening for AW at 127.0.0.1:38224
+1448968351.617: DW 7 log: 1448968351.617: Starting AW with command line (COVERITY_DW_PORT=38224): /home/vivotek/local/coverity/analysis/bin/cov-analyze --worker
+1448968351.617: DW 7 log: 1448968351.617: AW started: aw_pid=11520
+1448968351.628: DW 1 log: 1448968351.626: DW 1 received connection from AW: (local) 127.0.0.1:53806 - 127.0.0.1:36917 (remote)
+1448968351.628: DW 4 log: 1448968351.627: DW 4 received connection from AW: (local) 127.0.0.1:42691 - 127.0.0.1:59237 (remote)
+1448968351.629: DW 6 log: 1448968351.628: DW 6 received connection from AW: (local) 127.0.0.1:39239 - 127.0.0.1:44871 (remote)
+1448968351.629: DW 7 log: 1448968351.628: DW 7 received connection from AW: (local) 127.0.0.1:38224 - 127.0.0.1:57793 (remote)
+1448968351.629: DW 3 log: 1448968351.628: DW 3 received connection from AW: (local) 127.0.0.1:48726 - 127.0.0.1:41442 (remote)
+1448968351.630: DW 5 log: 1448968351.630: DW 5 received connection from AW: (local) 127.0.0.1:42218 - 127.0.0.1:49185 (remote)
+1448968351.630: DW 8 log: 1448968351.629: DW 8 received connection from AW: (local) 127.0.0.1:54062 - 127.0.0.1:40135 (remote)
+1448968351.631: DW 2 log: 1448968351.631: DW 2 received connection from AW: (local) 127.0.0.1:60000 - 127.0.0.1:42078 (remote)
+1448968352.040: AM closed the connection, DM shutting down
+1448968352.040: Disconnecting DW 1
+1448968352.040: Disconnecting DW 2
+1448968352.040: Disconnecting DW 3
+1448968352.040: Disconnecting DW 4
+1448968352.040: Disconnecting DW 5
+1448968352.040: Disconnecting DW 8
+1448968352.040: Disconnecting DW 6
+1448968352.040: Disconnecting DW 7
+1448968352.040: DW 1 log: 1448968352.039: DW 1: the DM closed the connection, DW shutting down
+1448968352.040: DW 1 log: 1448968352.039: DW 1 summary: aw_starts=1, wurs_sent=10, total_awms=214, total_dwms=295
+1448968352.040: DW 1 log: 1448968352.039: Disconnecting AW
+1448968352.040: DW 2 log: 1448968352.040: DW 2: the DM closed the connection, DW shutting down
+1448968352.040: DW 2 log: 1448968352.040: DW 2 summary: aw_starts=1, wurs_sent=5, total_awms=248, total_dwms=331
+1448968352.040: DW 2 log: 1448968352.040: Disconnecting AW
+1448968352.040: DW 3 log: 1448968352.039: DW 3: the DM closed the connection, DW shutting down
+1448968352.040: DW 3 log: 1448968352.039: DW 3 summary: aw_starts=1, wurs_sent=3, total_awms=90, total_dwms=170
+1448968352.040: DW 3 log: 1448968352.039: Disconnecting AW
+1448968352.040: DW 4 log: 1448968352.039: DW 4: the DM closed the connection, DW shutting down
+1448968352.040: DW 4 log: 1448968352.039: DW 4 summary: aw_starts=1, wurs_sent=0, total_awms=0, total_dwms=0
+1448968352.040: DW 4 log: 1448968352.039: Disconnecting AW
+1448968352.040: DW 5 log: 1448968352.041: DW 5: the DM closed the connection, DW shutting down
+1448968352.040: DW 5 log: 1448968352.041: DW 5 summary: aw_starts=1, wurs_sent=0, total_awms=0, total_dwms=0
+1448968352.040: DW 5 log: 1448968352.041: Disconnecting AW
+1448968352.041: DW 6 log: 1448968352.040: DW 6: the DM closed the connection, DW shutting down
+1448968352.041: DW 6 log: 1448968352.040: DW 6 summary: aw_starts=1, wurs_sent=0, total_awms=0, total_dwms=0
+1448968352.041: DW 6 log: 1448968352.040: Disconnecting AW
+1448968352.041: DW 7 log: 1448968352.041: DW 7: the DM closed the connection, DW shutting down
+1448968352.041: DW 7 log: 1448968352.041: DW 7 summary: aw_starts=1, wurs_sent=0, total_awms=0, total_dwms=0
+1448968352.041: DW 7 log: 1448968352.041: Disconnecting AW
+1448968352.041: DW 8 log: 1448968352.039: DW 8: the DM closed the connection, DW shutting down
+1448968352.041: DW 8 log: 1448968352.039: DW 8 summary: aw_starts=1, wurs_sent=0, total_awms=0, total_dwms=0
+1448968352.041: DW 8 log: 1448968352.039: Disconnecting AW
+1448968352.045: DW 4 log: 1448968352.044: AW exited with code 0
+1448968352.045: DW 4 log: AW peak mem bytes: 27779072
+1448968352.045: DW 7 log: 1448968352.045: AW exited with code 0
+1448968352.045: DW 7 log: AW peak mem bytes: 27779072
+1448968352.045: DW 8 log: 1448968352.044: AW exited with code 0
+1448968352.045: DW 8 log: AW peak mem bytes: 27779072
+1448968352.046: DW 4 exited with code 0
+1448968352.046: DW 7 exited with code 0
+1448968352.046: DW 8 exited with code 0
+1448968352.046: DW 6 log: 1448968352.047: AW exited with code 0
+1448968352.046: DW 6 log: AW peak mem bytes: 27779072
+1448968352.046: DW 5 log: 1448968352.047: AW exited with code 0
+1448968352.046: DW 5 log: AW peak mem bytes: 27779072
+1448968352.047: DW 2 log: 1448968352.047: AW exited with code 0
+1448968352.047: DW 2 log: AW peak mem bytes: 32043008
+1448968352.047: DW 6 exited with code 0
+1448968352.047: DW 5 exited with code 0
+1448968352.047: DW 1 log: 1448968352.047: AW exited with code 0
+1448968352.047: DW 1 log: AW peak mem bytes: 31068160
+1448968352.047: DW 2 exited with code 0
+1448968352.047: DW 3 log: 1448968352.046: AW exited with code 0
+1448968352.047: DW 3 log: AW peak mem bytes: 31035392
+1448968352.048: DW 1 exited with code 0
+1448968352.048: DW 3 exited with code 0
+1448968352.048: dm-summary: elapsed_time_ms=440, am_to_dm_wus=18, dm_to_am_wurs=18
+1448968352.048: dw-summary: dw_id=1, state=inactive, wus_outstanding=0, wus_sent=10, wurs_received=10, active_ms=311, idle_ms=80
+1448968352.048: dw-summary: dw_id=2, state=inactive, wus_outstanding=0, wus_sent=5, wurs_received=5, active_ms=347, idle_ms=76
+1448968352.048: dw-summary: dw_id=3, state=inactive, wus_outstanding=0, wus_sent=3, wurs_received=3, active_ms=170, idle_ms=201
+1448968352.048: dw-summary: dw_id=4, state=inactive, wus_outstanding=0, wus_sent=0, wurs_received=0, active_ms=0, idle_ms=0
+1448968352.048: dw-summary: dw_id=5, state=inactive, wus_outstanding=0, wus_sent=0, wurs_received=0, active_ms=0, idle_ms=0
+1448968352.048: dw-summary: dw_id=6, state=inactive, wus_outstanding=0, wus_sent=0, wurs_received=0, active_ms=0, idle_ms=0
+1448968352.048: dw-summary: dw_id=7, state=inactive, wus_outstanding=0, wus_sent=0, wurs_received=0, active_ms=0, idle_ms=0
+1448968352.048: dw-summary: dw_id=8, state=inactive, wus_outstanding=0, wus_sent=0, wurs_received=0, active_ms=0, idle_ms=0
+1448968352.048: DM exiting with code 0

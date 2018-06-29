@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include "header.h"
+
+int Tcp_Server(char *pcServerPort)
+{
+	int iServerSocket, iClientSocket;
+	char acBuffer[BUFFERSIZE] = {0};
+	char acReply[BUFFERSIZE] = "OK!";
+	struct sockaddr_in TServerAddr, TClientAddr;
+	int iReceived;
+	unsigned int uiClientAddrLen;
+	/*
+	 *   建立socket
+	 */
+	if ((iServerSocket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP)) < 0)
+	{
+		printf("[Server] Failed to create socket\n");
+		return FAIL;
+	}
+
+	/*
+	 *   Set up address
+	 */
+
+	bzero((char *)&TServerAddr, sizeof(TServerAddr));
+	TServerAddr.sin_family = AF_INET;
+	TServerAddr.sin_addr.s_addr = htonl(INADDR_ANY);
+	TServerAddr.sin_port = htons(atoi(pcServerPort));
+
+	/*
+	 *   Bind to address
+	 */
+	if (bind(iServerSocket, (struct sockaddr *)&TServerAddr, sizeof(TServerAddr)) < 0)
+	{
+		printf("[Server] Failed to bind\n");
+		return FAIL;
+	}
+
+	/*
+	 * Listen
+	 */
+
+	if (listen(iServerSocket, 5) < 0)
+	{
+		printf("[Server] Fail to listen\n");
+		return FAIL;
+	}
+
+	while(1)
+	{
+		uiClientAddrLen = sizeof(TClientAddr);
+		if ((iClientSocket = accept(iServerSocket, (struct sockaddr*)&TClientAddr, &uiClientAddrLen)) < 0)
+		{
+			printf("[Server] Failed to accept client connection\n");
+			return FAIL;
+		}
+
+		iReceived = recv(iClientSocket, acBuffer, BUFFERSIZE, 0);
+		//printf("===========%d============\n", iReceived);
+		if (iReceived  < 0)
+		{
+			printf("[Server] Failed to receive data from client\n");
+			return FAIL;
+		}
+		else if (iReceived > 0)
+		{
+			printf("[Server] Client connected: %s:%d\n", inet_ntoa(TClientAddr.sin_addr), ntohs(TClientAddr.sin_port));
+			printf("[Server] Receive data: %s\n", acBuffer);
+			if (send(iClientSocket, acReply, BUFFERSIZE, 0) < 0)
+			{
+				printf("[Server] Fail to reply\n");
+				return FAIL;
+			}
+
+		}
+		close(iClientSocket);
+	    memset(acBuffer, 0, BUFFERSIZE);
+	}
+	close(iServerSocket);
+	return SUCCESS;
+}
+
+
+
+int main(int argc, char *argv[])
+{
+	if (argc == 3 && strcmp(argv[1], "server") == 0)
+	{
+		Tcp_Server(argv[2]);
+	}
+	else
+	{
+		printf("Usage %s server <port>\n", argv[0]);
+		return FAIL;
+	}
+	return SUCCESS;
+}
